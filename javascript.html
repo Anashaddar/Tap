@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+
+    </title>
+</head>
+<body onload="ipf()">
+    
+</body>
+</html>
+<script>
+    function ipf(){
+        var num=[];
+     let n=0;
+        var cnt;
+      
+        cnt=prompt("Enter How many numbers you want to enter?");
+
+        for(let i=0;i<cnt;i++){
+            num[i]=prompt("Enter value for No"+i);
+            
+           }
+
+
+          var maxnum;
+          var minnum;
+
+
+            for(let f=0;f<num.length;f++){
+                
+
+                document.write(num[f]+"<br>");
+                maxnum=Math.max(num[f]);
+                minnum=Math.min(num[f]);
+
+            
+            }
+           
+
+       
+            var arrsort=[];
+            for(let i=0;i<num.length;i++){
+                
+                for(let j=i+1;j<num.length;j++){
+
+                    if(num[i]>num[j]){
+                        var a= num[i];
+                        num[i]=num[j];
+                        num[j]=a;
+
+                    }
+                }
+
+
+            }
+
+
+            for(let i= 0;i<num.length;i++){
+                document.write("<br>"+"No sorted: "+num[i]);
+            }
+      
+
+
+
+
+
+
+
+
+
+
+
+            function findMissing(arr, N) { 
+                    let i; 
+                
+                    // Create an Array of size N  
+                    // and filled with 0 
+                    let temp = new Array(N).fill(0); 
+                
+                    // If array element exist then  
+                    // set the frequency to 1 
+                    for (i = 0; i < N; i++) { 
+                        temp[arr[i] - 1] = 1; 
+                    } 
+                
+                    let ans = 0; 
+                    for (i = 0; i <= N; i++) { 
+                        if (temp[i] === 0) 
+                            ans = i + 1; 
+                    } 
+                     document.write("<br>"+ans);
+                 } 
+
+
+                 findMissing(num, num.length);
+
+
+        
+
+
+
+
+    
+        
+    
+    }
+
+</script>
